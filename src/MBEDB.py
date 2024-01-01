@@ -4,7 +4,29 @@ import sqlite3
 conn = sqlite3.connect('MBEDB.db')
 
 # إنشاء cursor لتنفيذ العبارات SQL
+
+
+
+
+
+
+
 cursor = conn.cursor()
+# إنشاء جدول النفقات
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS expenses (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        date TEXT,
+        description TEXT,
+        amount REAL,
+        category TEXT
+    )
+''')
+
+# حفظ التغييرات
+conn.commit()
+conn.close()
+
 
 # إنشاء جدول
 create_table_query = '''
@@ -21,4 +43,13 @@ conn.commit()
 
 # إغلاق الاتصال بقاعدة البيانات
 conn.close()
+
+
+
+
+
+
+
+
+
 
