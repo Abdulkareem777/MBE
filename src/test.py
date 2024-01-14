@@ -3,10 +3,8 @@ import sqlite3
 
 # Replace 'your_database_name.db' with the name of your SQLite database file
 db_file = 'MBEDB.db'
-
 # Create a connection
 conn = sqlite3.connect(db_file)
-
 # Check if the connection is successful
 if conn:
     print("Connected to SQLite database")
@@ -69,5 +67,5 @@ def add():
         return 'Data added successfully'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+     app.run(debug=True)
 

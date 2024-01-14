@@ -4,13 +4,6 @@ import sqlite3
 conn = sqlite3.connect('MBEDB.db')
 
 # إنشاء cursor لتنفيذ العبارات SQL
-
-
-
-
-
-
-
 cursor = conn.cursor()
 # إنشاء جدول النفقات
 cursor.execute('''
@@ -25,7 +18,7 @@ cursor.execute('''
 
 # حفظ التغييرات
 conn.commit()
-conn.close()
+#conn.close()
 
 
 # إنشاء جدول
