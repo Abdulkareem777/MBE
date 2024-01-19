@@ -27,6 +27,6 @@ def test():
    conn.close()
    return render_template("testpage.html",value=countt[0])
 
-if __name__=='__main__':
-    app.run(debug=True)
+# if __name__=='__main__':
+#     app.run(debug=True)
 
